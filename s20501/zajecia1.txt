@@ -1,0 +1,21 @@
+                   
+Instalacja Linux Debian w trybie tekstowym. Każdy podpunkt to następny ekran instalacji
+
+1. Wybieramy język jaki będzie nam towarzyszyć przy instalacji
+2. Wybieramy swoją lokalizację. Ma wpływ między innymi na naszą strefę czasową
+3. Wybieramy nasz układ klawiatury. Ma wpływ na to jakich znaków będziemy mogli używać 
+4. Nazwa hosta. Jeśli nie jesteśmy w jakiejś konkretnej sieci na przykład uczelnianej to możemy wpisać co chcemy 
+5. Nazwa domeny. Jeśli nie jesteśmy w żadnej konkretnej sieci możemy zostawić puste 
+6. Hasło dla konta root. Konto root ma wszystkie uprawnienia 
+7.Imię i nazwisko użytkownika dla którego zostanie utworzone konto użytkowe po instalacji systemu 
+6. “Nick” użytkownika dla którego zostanie utworzone konto użytkowe po instalacji systemu 
+7. Hasło użytkownika dla którego zostanie utworzone konto użytkowe po instalacji systemu
+8. Wybieramy swoją strefę czasową 
+9. Wybieramy sposób partycjonowania dysku. Możemy wybrać opcję manualną lub automatyczną, z LVM albo bez. LVM pomaga przy zarządzaniu wymianą dysku twardego, partycjonowaniem i tworzeniem kopii zapasowych po instalacji systemu. W tej instrukcji wybierzemy wersją automatyczną bez LVM
+10. Wybieramy dysk na którym ma być zainstalowany system
+11. Wybieramy na ile partycji ma być podzielony dysk. W tej instrukcji wybierzemy opcję “wszystkie pliki na jednej partycji”
+12. Ekran podsumowujący to jak będą wyglądać nasze partycje 
+13. Wybieramy serwer z którego będą pobierane debianowe repozytoria, im bliżej nas tym lepiej  
+14. Konfiguracja HTTP proxy (możemy zostawić puste )
+15. Wybieramy urządzenie z którego ma być zainstalowany system (pendrive,płyta)
+16. Czekamy na koniec instalacji 
