@@ -1,0 +1,18 @@
+Instalacja linuxa dla świeżaków
+
+-wybieramy język angielski
+-wybieramy lokalizacje
+-wybieramy układ klawiatury
+-nazwa hosta i domeny, domyślnie zostawić puste
+-ustawiamy hasło dla roota
+-tworzymy konto użytkownika
+-wybieramy strefę czasową
+-Wybieramy sposób partycjonowania dysku. Możemy wybrać opcję manualną lub automatyczną, 
+z LVM albo bez. LVM pomaga przy zarządzaniu wymianą dysku twardego, 
+partycjonowaniem i tworzeniem kopii zapasowych po instalacji systemu. 
+W tej instrukcji wybierzemy wersją automatyczną bez LVM, wcale tego nie zerżnąłem
+-wybieramy dysk na którym instalujemy pingwina
+-podsumowanie
+-wybieramy server z którego będziemy zasysać repozytoria
+-konfiguracja proxy
+-instalacja
