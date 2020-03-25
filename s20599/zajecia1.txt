@@ -1,0 +1,59 @@
+Instalacja Debiana
+
+Potrzebne:
+- środowisko do postawienia maszyny wirtualnej(np. Oracle VirtualBox)
+- obraz systemu(w tym przypadku Debiana, do pobrania np. tutaj: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.3.0-amd64-netinst.iso)
+- trochę czasu :)
+
+Korzystam z wersji w języku angielskim, więc będę odwoływał się do nazw po angielsku.
+
+Przygotowywanie VirtualBox'a do pracy:
+1. Instalujemy oraz włączamy program VirtualBox
+2. Naciskamy New
+3. W polu Name wpisujemy nazwę maszyny, preferowane Debian
+4. Jeśli w punkcie 3 wpisaliśmy Debian, w polach Type oraz Version powinno być wszystko dobrze ustawione. Jeśli nie to:
+4.1. W polu type wybrać Linux
+4.2. W polu Version wybrać Debian 32-bit dla komputerów 32bit, 64-bit dla 64bitowych
+5. Naciskamy Next
+6. Wybieramy zadowalającą nas ilośc pamięci ram, którą będzie miała do dyspozycji maszyna(min 512MB)
+7. Wybieramy "Create a virtual hard disk now"
+8. VDI->Next->Dynamically allocated(aby plik nie zajmował odrazu całej wybranej przez nas pojemności)
+9. Tutaj wybieramy miejsce gdzie zapisze się nasz wirtualny dysk oraz jego maksymalna pojemność-> Create
+10. Po utworzeniu wybieramy naszą maszynę, dajemy Settings->Storage->Płyta z plusem->Add->Wybieramy obraz który pobraliśmy
+11. Włączamy naszą maszynę
+
+Instalacja Debiana:
+1. Wybieramy tekstowy tryb instalacji(samo Install zamiast Graphical)
+Ustawienia do punktu 5 są subiektywne, można ustawiać pod siebie, choć najlepiej jest zrobić to uniwersalnie
+2. Język - angielski(wybranie polskiego może powodować problemy)
+3. Kraj - Other->Europe->Poland
+4. Lokalizacja - United States(najbardziej uniwersalne)
+5. Keymap - American English(jak wyżej)
+6. Hostname - Nazwa komputera w sieci
+7. Domain name - nazwa domeny(jeśli korzystamy z domen w sieci to ustawić, jeśli nie to zostawić puste)
+8. Hasło użytkownika Root - ustawić takie aby zapamiętać, ale żeby było trudne(na cele ćwiczeń ustawić proste, w końcu tylko my będziemy korzystać z tej maszyny)
+9. Ponowić hasło Root'a
+10. Dane użytkownika - domyślnie wpisujemy imie i nazwisko, można wpisać cokolwiek lub zostawić puste
+11. Nazwa użytkownika - nazwa użytkownika standardowego komputera(na cele ćwiczeń nazwijmy user)
+12. Hasło tego użytkownika - lepiej nie zostawiać bez hasła, może to przyspożyć problemów
+13. Ponowić hasło użytkownika
+14. Wybieramy sposób partycjonowania dysku - Guided jeśli nie mamy specjalnych wymagań -> Use entire disk; manual jeśli potrzebujemy wybrać więcej opcji; Dla serwerów polecam dać opcję encrypted LVM, pozwala na dodawanie dysków bez restartu maszyny
+15. W naszym przypadku wybieramy Manual
+16. Wybieramy nasz dysk->Enter->Yes
+17. Free Space -> Create a new partition->Rozmiar partycji(wybierzmy ok. 4,5GB na SWAP) ->Logical-> Use as: SWAP->Done
+18. Free Soace -> Create a bew partition->Pozostałe miejsce->Primary->Use as: EXT4->Done
+19. Finish partitioning->Yes(!Nastąpi sformatowanie dysku!)
+20. Wybieramy No przy szukaniu kolejnego dysku
+21. Jako region wybieramy Poland->ftp.task.gda.pl(serwer z Gdańska)
+22. Informacje o proxy zostawiamy puste, jeśli nie potrzebujemy z niego skorzystać
+23. Na ankiete dajemy No, no chyba że ktoś chce ją wypełnić :)
+24. Wybieramy składniki systemu do zainstalowania; w naszym przypadku odznaczamy Desktop environment i print server, natomiast zaznaczamy ssh server(Spacją, nie enterem)
+25. Jeśli mamy taką potrzebę, można zainstalować bootloader GRUB(służy do wyboru systemu, jeśli mamy jeden lub więcej), w naszym przypadku zrobimy to -> wybieramy dysk na którym ma być zainsalowany
+System zainstalowany! Nic tylko korzystać!
+
+Warto w celach ćwiczeniowych zapisać sobie hasła do użytkowników, bo inaczej możemy zapomnieć, a nie chcielibyśmy znowu instalwać systemu :)
+Aby to zrobić należy:
+1. Zalogować się na roota
+2. zedytować plik /etc/issues(nano, vim itp.)
+3. Wpisać w zrozumiałej formie login i hasło do użytkownika oraz roota
+4. Zapisać plik
