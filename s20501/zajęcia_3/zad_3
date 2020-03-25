@@ -1,0 +1,9 @@
+#!/bin/bash
+filename="$(basename $0)"
+name="${filename%.*}"
+extension="${filename##*.}"
+
+if [ "${extension}" != "sh" ]; then
+    mv $0 ${0}.sh
+
+fi    
