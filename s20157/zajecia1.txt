@@ -1,0 +1,49 @@
+Zajęcia: Systemy Operacyjne
+
+Instalacja systemu Linux na maszynie wirtualnej
+(krok po kroku)
+
+Potrzebne programy:
+- maszyna wirtualna (np. Oracle VirtualBox)
+- obraz systemu (np. Linux Debian )
+
+step by step dla Oracle VirtualBox oraz Debian:
+
+Tworzenie i uruchamianie maszyny
+1. Instalujemy i odpalamy VirtualBoxa
+2. New -> wpisujemy "debian" (w razie co apka sama wypełni, także reszte pól) -> Next
+3. Wybieramy ilość RAM, wybrać w zależności od możliwości naszego komputera( minimum 512MB) -> Next
+4. Tworzymy wirtualny dysk (wybieramy Create a virtual disk now) -> Create
+5. wybieramy VDI -> Next
+6. Bierzemy Dynamiczne powiększanie dyku -> Next
+7. Jeśli planujemy trzymać duże pliki na Debianie to wybrać conamniej 10GB -> Create
+8. Settings -> Storage -> wybieramy obraz płyty -> OK
+9. Odpalamy maszyne zieloną strzałką z napisem START
+
+Instalacja Debiana
+1. Wybieramy tekstowy tryb instalacji
+2. Język english -> Next
+3. Kraj Polska -> Next
+4. Podajemy nazwe hosta (wyświetlana w sieci nazwa systemu) -> Next
+5. Nazwa domeny - zostawiamy puste -> Next
+6. Podajemy hasło -> Next
+7. Podajemy nazwę użytkownika -> Next
+8. Podajemy login -> Next
+9. Podajemy hasło użytkownika -> Next (inne niż root) -> Next
+10. Podział partycji - wybieramy use Entire disk and set up LVM ( LVM - Logical Volume Manager, pozwala zardządzać dyskami, 
+m.in powzwala na łączenie kilku partycji znajdujących się na różnych urządzeniach pamięci masowej w jeden wirtualny dysk. -> Next
+11. Wybieramy Dysk który chcemy podzielić -> Next
+12. Wybieramy (wedle uznania, ale teraz wybieramy) All files in one partition -> Next
+13. Sprawdzamy czy podział jest ok, główna partycja na której będzie system ma numer (od 1 do 4),
+oraz system plików ext14(1-4 partycje podstawowe, w tym 4 jest rozszerzona. od #5 są partycje logiczne) -> Next
+14. Jeśli ok to zapisujemy zmiany
+15. Potwierdzamy zmiany (stąd już nie ma odwrotu, po zatwierdzeniu nastąpi sformatowanie dysku!!!!)
+16. Polska - Kraj, z którego pobieramy pakiety -> Next
+17. Wybieramy lustrany serwer -> Next
+18. Software selection - zaznaczamy napewno SSH server, i ew. jakiś tryb graficzny (tu: nie instalujemy graficznego trybu:]) -> Next
+19. Jeśli chcemy instalujemy bootloadera "GRUB" -> TAK lub NIE
+20.  -> Next 
+21. KONIEC, system zainstalowany!
+
+Tworzymy pierwszy plik, który będzie wyświetlał prośbe o login i hasło przy odpaleniu systemu
+	vi /etc/issue (i tam wstukujemy np. "Podaj login podaj haslo)
