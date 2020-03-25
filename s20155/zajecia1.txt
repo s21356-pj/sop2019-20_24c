@@ -1,0 +1,20 @@
+Instalacja linuxa (debian)
+
+1.Wybierz "Install"
+2.Wybierz język instalatora (English)
+3.Wybierz kraj do strefy czasowej (other -> Europe -> Poland -> brak, więc wybierz United States)
+4.Keymap: Polish
+5.Podaj nazwę hosta (hostname)
+6.Podaj nazwę domeny (domain name)
+7.Podaj hasło roota (i potwierdź)
+8.Podaj pełną nazwę użytkownika
+9.Podaj nazwę użytkownika
+10.Podaj i potwierdź hasło użytkownika
+11.Partycjonowanie dysków(można wybrać guided - use entire disk)
+12.Potwierdź, tak, tak, tak, tak...
+13.Zeskanować dysk w poszukiwaniu obrazu płyty? Nie
+14.Wybierz serwer (Poland ->debian.org)
+15.Proxy? Nie trzeba -> Enter
+16.Package usage survey? -> Nie
+17.Zaznacz SSH -> Enter
+18.Chcesz GRUBa? -> Nie trzeba
