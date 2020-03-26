@@ -1,0 +1,8 @@
+root      7643  0.0  0.2 144612 10892 ?        Ss   13:36   0:00 sshd: s20157 [priv]
+s20157    7671  0.0  0.1 144744  7584 ?        S    13:36   0:00 sshd: s20157@pts/5
+s20157    7673  0.0  0.2  93236 10348 pts/5    Ss   13:36   0:00 -shell
+s20157   13711  0.0  0.1 107516  7248 pts/5    R+   14:49   0:00 ps axu
+s20157   13712  0.0  0.0  14520  1004 pts/5    S+   14:49   0:00 grep s20157
+raz dwa TRZY trzy Trzy cztery
+raz dwa TRZY  Trzy cztery
+raz dwa   Trzy cztery

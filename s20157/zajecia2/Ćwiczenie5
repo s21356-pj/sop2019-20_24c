@@ -1,0 +1,16 @@
+#!/bin/bash
+
+IMIE=$1
+
+I=$((${#IMIE}-1))
+
+P="${IMIE:$I}"
+O="${IMIE: -1}"
+
+
+if [ ${IMIE:$I} = "a" ]
+then
+	echo "$IMIE ma kota, a kot ma ${IMIE%a}ę" 
+else
+	echo "$IMIE ma kota, a kot ma ${IMIE}a"
+fi

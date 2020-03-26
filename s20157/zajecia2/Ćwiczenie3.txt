@@ -1,0 +1,7 @@
+PATH - sciezka, okresla lokalizacje plikow(programow)uruchamiajacych
+RANDOM - generuje losowe liczby 0-32767
+PWD - biezacy katalog
+PS1 - zawiera znak zachety
+USER - nazwa uzytkownika
+HOSTNAME - nazwa hosta
+OSTYPE - nazwa systemu operacyjnego, wktorym jest wykonywany bash

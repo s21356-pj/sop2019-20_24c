@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cat $1 | sed ''s/s20157/$(printf "\e[31ms20157\e[0m")/''
+
+##odpalic z plikiem mylog
