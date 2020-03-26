@@ -1,0 +1,30 @@
+#!/bin/bash
+
+TABLICA=( "$@" )
+
+
+
+for ((i=0;i<${#TABLICA[@]};i++))
+do	
+	
+	ZMIENNA=$(cat ${TABLICA[i]})
+	DLUGOSC=${#ZMIENNA}
+	echo ${TABLICA[i]}
+	for((j=1;j<$DLUGOSC;j++)) 
+	do
+		
+		
+		if [ $j = 1 ]; then
+		for((k=$DLUGOSC;k>0;k--))
+		do
+		
+			echo -n "${ZMIENNA:k:1}"
+		done
+		echo -e "\n"
+		fi
+
+		echo -n "${ZMIENNA:j:1}"
+	done
+
+	echo -e "\n"
+done	
