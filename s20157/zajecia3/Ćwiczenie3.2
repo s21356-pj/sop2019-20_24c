@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function ciag(){
+VAL=$1
+if [ $VAL=0 ]; then
+echo "0"
+
+elif [ $VAL=1 ];then
+echo "1"
+
+else
+	echo "$(($(ciag $(($VAL-1))) + $(ciag $(($VAL-2)))))"  
+
+fi
+}
+echo $(ciag $1)
+

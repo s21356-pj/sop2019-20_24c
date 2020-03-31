@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+echo "Podaj na jaki kolor chcesz zakreslic swoje imie(login) [30-37]"
+read KOLOR
+
+while [ $KOLOR -lt 30 ] & [ $KOLOR -gt 37 ];
+do
+	echo "Wybierz jeszcze raz kolor [30-37]"
+	read KOLOR
+done
+
+cat $1 | sed ''s/$USER/$(printf "\e["$KOLOR"m$USER\e[0m")/''

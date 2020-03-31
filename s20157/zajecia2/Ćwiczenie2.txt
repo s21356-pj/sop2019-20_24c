@@ -1,0 +1,17 @@
+X=tekst
+echo $X
+bash
+echo $X
+
+Zmienna X nie jest exportowana,
+zatem jako zmienna lokalna nie zostanie "zapamietana"
+w nastepnej podpowloce basha.
+==============
+X=Tekst dłuższy
+echo $X
+nalezy zrobic np. tak: X="tekst dłuższy"
+==============
+roznica miedzy " a ' jest taka ze miedzy ' '
+bedzie zachowany ciag znakow, bez interpretacji zmiennych i znakow specjalnych
+a w " " znaki specjalne sa interpretowane
+a zmienne zamieniane na wartosci

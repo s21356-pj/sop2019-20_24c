@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+if [[ $1 =~ ^[A-Z][a-zżźśćłóń]+$ ]]; then
+echo "Podałeś imię"
+elif [[ $1 =~ ^[0-9]{2}-?[0-9]{3}$ ]]; then
+	echo "Podałeś kod pocztowy"
+elif [[ $1 =~^[\w+-%.ĘÓĄŁŻŹĆŃęóąłżźćń]+@[A-Za-z0-9-.]/.[A-Z][a-z]{2,4}$ ]]; then
+	echo "Podałeś adres e-mail"
+fi
