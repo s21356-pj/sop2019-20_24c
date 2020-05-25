@@ -3,39 +3,34 @@ Aby zainstalowaæ system linux musimy posiadaæ:
 - obraz systemu (np. Linux Debian )
 
 Tworzenie i uruchamianie maszyny
-1. Instalujemy VirtualBoxa i uruchamiamy go
-2. Wybieramy now¹ maszynê i w nazwie wpisujemy "deb(instalka sama wype³nir reszte pól) -> Next
-3. Wybieramy iloœæ RAM, min 512MB) -> Next
-4. Tworzymy wirtualny dysk (wybieramy Create a virtual disk now) -> Create
-5. wybieramy VDI -> Next
-6. Bierzemy Dynamiczne powiêkszanie dyku -> Next
-7. Jeœli planujemy trzymaæ du¿e pliki na Debianie to wybraæ conamniej 10GB -> Create
-8. Settings -> Storage -> wybieramy obraz p³yty -> OK
-9. Odpalamy maszyne zielon¹ strza³k¹ z napisem START
+1. Uruchamiamy VirtualBoxa i torzymy nowa maszyne
+2. W nazwie wpisujemy "deb(instalka sama wypelni reszte pol).
+3. Wybieramy ilosc RAM, min 512MB).
+4. Wybieramy obraz naszej maszyny z dysku
+5. Maszyna jest gotowa
+9. Odpalamy maszyne zielona strzalka z napisem START
 
 Instalacja Debiana
-1. œci¹gamy Debian ze strony www.debian.org
-2. Uruchamiamy œci¹gniêty plik
+1. Sciagamy Debiana ze strony np: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.3.0-amd64-netinst.iso
+2. Uruchamiamy sciagniety plik
 3. Wybieramy tekstowy tryb instalacji
-4. Jêzyk english -> Next
-5. Kraj Polska -> Next
-6. Podajemy nazwe hosta czyli nazwê systemu jaka bêdzie wyœwietlana w sieci -> Next
-7. Nazwa domeny - zostawiamy puste -> Next
-8. Podajemy has³o -> Next
-9. Podajemy nazwê u¿ytkownika -> Next
-10. Podajemy login -> Next
-11. Podajemy has³o u¿ytkownika -> Next (inne ni¿ root) -> Next
-12. Podzia³ partycji - wybieramy use Entire disk and set up LVM ( LVM - Logical Volume Manager, pozwala zardz¹dzaæ dyskami, 
-m.in powzwala na ³¹czenie kilku partycji znajduj¹cych siê na ró¿nych urz¹dzeniach pamiêci masowej w jeden wirtualny dysk. -> Next
-13. Wybieramy Dysk który chcemy podzieliæ -> Next
-14. Wybieramy All files in one partition -> Next
-15. Sprawdzamy czy podzia³ jest ok, g³ówna partycja na której bêdzie system ma numer (od 1 do 4),
-oraz system plików ext14(1-4 partycje podstawowe, w tym 4 jest rozszerzona. od #5 s¹ partycje logiczne) -> Next
-16. Zapisujemy zmiany
-17. Potwierdzamy zmiany - nast¹pi sformatowanie dysku
-18. Polska - Kraj, z którego pobieramy pakiety -> Next
-19. Wybieramy lustrzany serwer -> Next
-20. Software selection - zaznaczamy napewno SSH server,+ jakiœ tryb graficzny ale nie koniecznie ) -> Next
-21. Mo¿emy zainstalowaæ bootloadera -> TAK lub NIE
-22.  -> Next 
-23. KONIEC!
+4. Jezyk english.
+5. Kraj Polska.
+6. Podajemy nazwe hosta czyli nazwe systemu jaka bedzie wyswietlana w sieci.
+7. Nazwa domeny - zostawiamy puste.
+8. Podajemy haslo.
+9. Podajemy nazwe uzytkownika.
+10. Podajemy login.
+11. Podajemy haslo uzytkownika. (inne niz root).
+12. Podzial partycji - wybieramy use Entire disk and set up LVM ( LVM - Logical Volume Manager, pozwala zarzadzac dyskami, 
+m.in powzwala na laczenie kilku partycji znajdujacych sie na roznych urzadzeniach pamieci masowej w jeden wirtualny dysk.
+13. Wybieramy Dysk ktory chcemy podzielic.
+14. Wybieramy All files in one partition.
+15. Pojawi sie ekran, z podsumowaniem naszych zmian.
+16. Zapisujemy zmiany.
+17. Potwierdzamy zmiany - nastapi sformatowanie dysku.
+18. Wybieramy Polska - kraj, z ktorego pobieramy pakiety.
+19. Wybieramy lustrzany serwer. (im blizej nas tym lepiej)
+20. Software selection - zaznaczamy napewno SSH server,+ jakis tryb graficzny ale nie koniecznie )
+21. Wybieramy urzadzenie, z ktorego ma byc zainstalowany system.
+22. Po zakonczeniu instalacji, system jest gotowy.
