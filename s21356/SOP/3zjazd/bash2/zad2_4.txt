@@ -1,9 +1,10 @@
 #!/bin/bash
 
-count=$(find . -maxdepth 1 -type f | wc -l)
+ls -l>lista.txt
+ile=$(wc -l lista.txt)
+if [[ $ile > 6 ]]
+then
+echo "Jest wiecej niz 5 plikow"
+fi
 
-if [ $count -gt 5 ]; then
-    echo Jest wiêcej ni¿ 5 plików
-
-fi    
 
