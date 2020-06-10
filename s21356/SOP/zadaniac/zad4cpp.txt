@@ -1,0 +1,19 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    FILE* plik;
+    plik = fopen("dane.txt", "r");
+    char znak;
+    do
+    {
+        znak = fgetc(plik);
+        cout << znak << endl;
+    }
+    while(znak != EOF);
+    fclose(plik);
+    return 0;
+}
