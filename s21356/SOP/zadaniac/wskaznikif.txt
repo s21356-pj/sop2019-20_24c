@@ -1,0 +1,71 @@
+#include <iostream>
+
+using namespace std;
+
+typedef int (*funkcja)(int a, int b);
+int dzialanie ();
+int liczbaelem();
+void zapisdotab(int tab [], int n);
+void oblicz(int, int[], funkcja [], int, int);
+int suma (int a, int b);
+int maksimum( int a, int b);
+int minimum (int a, int b);
+
+int main(int argc, char **argv){
+    
+int v;
+funkcja fun [] = {maksimum, minimum, suma};
+int nrdzialania = dzialanie();
+int ile = liczbaelem();
+int tab [ile];
+zapisdotab(tab, ile);
+
+oblicz(v, tab, fun, nrdzialania, ile);
+
+return 0;
+}
+
+
+int liczbaelem(){
+	int n = 0;
+	cout << "Podaj liczbe elementow, ktore chcesz wprowadzic" << endl;
+	cin >> n;
+	return n;
+}
+void zapisdotab(int tab[], int n){
+	int i = 0;
+	for (i = 0; i < n; i++){
+
+	cout <<	"Podaj " << i+1<< " element: "<<endl;
+    cin >> tab[i];
+	}
+}
+void oblicz(int j, int tab[], funkcja fun[], int nrdzialania, int ile){
+j = tab[0];
+int i;
+for (i = 1; i < ile; i++){
+    j = fun[nrdzialania](j, tab[i]);
+    cout << "Dzialanie " << i <<": " << j <<endl;
+}
+}
+int suma(int a, int b){
+	return a+b;
+}
+
+int maksimum(int a, int b){
+	return a > b ? a : b;
+}
+
+int minimum(int a, int b){
+	return a < b ? a : b;
+}
+
+int dzialanie (){
+	int n = 0;
+	cout << "Jakie dzialanie chcesz wykonac? "<<endl;
+	cout << "0 - maksimum"<<endl;
+	cout << "1 - minimum"<<endl;
+	cout << "2 - suma"<< endl;
+	cin >> n;
+	return n;
+}

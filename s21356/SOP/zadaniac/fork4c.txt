@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+
+int main(int argc, char* argv[]){
+pid_t rodzic = getpid();
+for(int i = 0; i<100; i++){
+    pid_t dziecko = fork();
+    if (dziecko == 0){
+        break;
+    }
+}
+    if (getppid() == rodzic){
+        printf("Nastepne dziecko czeka\n");
+        sleep(3);
+        printf("Dziecko sie konczy\n");
+    }
+    if (getpid() == rodzic){
+    printf("Rodzic zaczyna czekac\n");
+    wait(NULL);
+    }
+    
+
+
+    return(0);
+}

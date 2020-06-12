@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+
+int main(){
+    pid_t a = fork();
+    printf("PID: %d\n", getpid());
+    printf("PPID: %d\n", getppid());
+    if(a>0){
+        wait(NULL);
+    }
+    return(0);
+}
